@@ -1,0 +1,30 @@
+# Free Virtual Gaming PC — Moonlight + Sunshine
+
+Projeto para transformar **seu próprio PC Windows 11** em um host real de jogos e aplicativos, acessível pelo Moonlight usando Sunshine. Não é uma VM hospedada nem uma tela simulada: os programas executam no hardware local do host.
+
+> **Limite importante:** o repositório e os programas de streaming podem ser gratuitos; um PC com GPU disponível gratuitamente na nuvem, de forma persistente e adequada a jogos, não é garantido. O desempenho depende exclusivamente do hardware, da conexão e da rede elétrica/internet do seu PC. Este projeto não cria GPU, RAM, Windows ou jogos que você não tenha.
+
+## O que está incluído
+
+- Scripts PowerShell para instalar Sunshine, Chrome e Steam via WinGet e verificar o host.
+- Atalho para preparar a instalação do Roblox a partir do site oficial.
+- Instruções para instalar Resident Evil 4 Remake pela Steam, usando uma cópia legítima.
+- Tutorial de Moonlight, controles, acesso remoto seguro com Tailscale e solução de problemas.
+
+## Requisitos
+
+- Windows 11 atualizado, conta com privilégios de administrador para instalação e um PC que permaneça ligado durante a sessão.
+- GPU com codificador de vídeo compatível e drivers atualizados para streaming acelerado. O script de diagnóstico informa o hardware detectado; ele não promete compatibilidade ou desempenho.
+- Rede cabeada é recomendada para o host. Para 4K/120 FPS são necessários hardware, codificador, tela/driver virtual quando aplicável e rede capazes de sustentar esse modo.
+- Espaço em disco para Windows, aplicativos e jogos. Resident Evil 4 Remake é um jogo comercial; compre-o e instale-o pela Steam.
+- Moonlight instalado no celular, tablet ou computador cliente.
+
+## Instalação rápida
+
+1. Baixe ou clone este repositório no PC Windows 11 que será o host.
+2. Abra **PowerShell como Administrador** na pasta do projeto.
+3. Execute:
+
+   ```powershell
+   Set-ExecutionPolicy -Scope Process Bypass
+   .\scripts\Install-Host.ps1
